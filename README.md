@@ -32,3 +32,5 @@ RISPOSTE:
 8. SELECT COUNT(\*) as `numero degli insegnanti` FROM `teachers` WHERE `phone` IS NULL;
 
 9. INSERT INTO `students` ( `name`, `surname`, `date_of_birth`, `email`, `address`, `degree_id`, `registration_number`) VALUES ('name', 'surname', '1990-01-01', 'email', 'address', '1', 'registration_number');
+
+10. UPDATE teachers SET office_number='126' WHERE name LIKE 'Pietro' AND surname LIKE 'Rizzo'
