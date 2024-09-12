@@ -28,3 +28,5 @@ RISPOSTE:
 6. SELECT \* FROM `degrees` WHERE `level` = 'magistrale';
 
 7. SELECT COUNT(\*) as `numero di dipartimenti` FROM `departments`;
+
+8. SELECT COUNT(\*) as `numero degli insegnanti` FROM `teachers` WHERE `phone` IS NULL;
