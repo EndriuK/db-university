@@ -46,3 +46,9 @@ risposte:
    FROM students
    JOIN degrees ON students.degree_id = degrees.id
    WHERE degrees.name = 'Corso di Laurea in Economia';
+
+2. SELECT degrees.name AS nome_corso, departments.name AS nome_dipartimento
+   FROM degrees
+   JOIN departments ON degrees.department_id = departments.id
+   WHERE departments.name = 'Dipartimento di Neuroscienze'
+   AND degrees.level = 'magistrale';
