@@ -52,3 +52,9 @@ risposte:
    JOIN departments ON degrees.department_id = departments.id
    WHERE departments.name = 'Dipartimento di Neuroscienze'
    AND degrees.level = 'magistrale';
+
+3. SELECT courses.name AS corsi_di_Fuvio_Amato
+   FROM courses
+   JOIN course_teacher ON courses.id = course_teacher.course_id
+   JOIN teachers ON teachers.id = course_teacher.teacher_id
+   WHERE teachers.id = 44
