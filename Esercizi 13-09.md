@@ -5,6 +5,12 @@ GROUP BY
 3. Calcolare la media dei voti di ogni appello d'esame
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
-5. SELECT COUNT() AS number_students_for_year, YEAR(enrolment_date) AS entolment_year
+risposte:
+
+1. SELECT COUNT() AS number_students_for_year, YEAR(enrolment_date) AS entolment_year
    FROM students
    GROUP BY YEAR(enrolment_date)
+
+2. SELECT COUNT() AS teachers_quantity, office_address
+   FROM teachers
+   GROUP BY office_address
