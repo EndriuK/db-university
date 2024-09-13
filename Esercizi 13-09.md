@@ -59,8 +59,15 @@ risposte:
    JOIN teachers ON teachers.id = course_teacher.teacher_id
    WHERE teachers.id = 44
 
-   4. SELECT students.surname, students.name, departments.name AS name_department, degrees.name AS name_degree
-      FROM students
-      JOIN degrees ON students.degree_id = degrees.id
-      JOIN departments ON degrees.department_id = departments.id
-      ORDER BY students.surname, students.name
+4. SELECT students.surname, students.name, departments.name AS name_department, degrees.name AS name_degree
+   FROM students
+   JOIN degrees ON students.degree_id = degrees.id
+   JOIN departments ON degrees.department_id = departments.id
+   ORDER BY students.surname, students.name
+
+5. SELECT degrees.name AS name_degree, courses.name AS name_course, teachers.name AS name_teacher, teachers.surname AS surname_teacher
+   FROM degrees
+   JOIN courses ON courses.degree_id = degrees.id
+   JOIN course_teacher ON course_teacher.course_id = courses.id
+   JOIN teachers ON course_teacher.teacher_id = teachers.id
+   ORDER BY name_degree, name_course
