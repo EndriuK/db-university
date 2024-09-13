@@ -18,3 +18,7 @@ risposte:
 3. SELECT AVG(vote) AS voto_medio, exam_id
    FROM exam_student
    GROUP BY exam_id
+
+4. SELECT COUNT(\*) AS degrees_number, department_id
+   FROM degrees
+   GROUP BY department_id
