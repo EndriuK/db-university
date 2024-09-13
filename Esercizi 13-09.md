@@ -14,3 +14,7 @@ risposte:
 2. SELECT COUNT() AS teachers_quantity, office_address
    FROM teachers
    GROUP BY office_address
+
+3. SELECT AVG(vote) AS voto_medio, exam_id
+   FROM exam_student
+   GROUP BY exam_id
