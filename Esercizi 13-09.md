@@ -79,3 +79,12 @@ risposte:
    JOIN degrees ON courses.degree_id = degrees.id
    JOIN departments ON degrees.department_id = departments.id
    WHERE departments.name = 'Dipartimento di Matematica'
+
+7. SELECT students.id, students.surname, students.name, courses.name AS exam_name, COUNT(exam_student.exam_id) AS attempt_count, MAX(exam_student.vote) AS max_vote
+   FROM exam_student
+   JOIN students ON exam_student.student_id = students.id
+   JOIN exams ON exam_student.exam_id = exams.id
+   JOIN courses ON exams.course_id = courses.id
+   WHERE exam_student.vote >= 18
+   GROUP BY students.id, students.name, students.surname, courses.name
+   ORDER BY students.surname, students.name;
